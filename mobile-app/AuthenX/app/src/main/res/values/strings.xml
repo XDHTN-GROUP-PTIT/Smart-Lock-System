@@ -1,0 +1,168 @@
+<resources>
+    <string name="app_name">AuthenX</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="instruction_camera">Place the face in the frame. Click capture button to authenticate.</string>
+    <string name="authenx">AuthenX</string>
+    <string name="scan_face">Scan face</string>
+    <string name="register_face">Register face</string>
+    <string name="scan_fingerprint">Scan fingerprint</string>
+    <string name="register_fingerprint">Register fingerprint</string>
+    <string name="fingerprint_authentication">Fingerprint authentication</string>
+    <string name="fingerprint_consstruction">Place your finger on the fingerprint sensor to authenticate</string>
+    <string name="cancel">Cancel</string>
+    <string name="access_statistic">Access statistic</string>
+    <string name="overall">Overall</string>
+    <string name="today">Today</string>
+    <string name="times">times</string>
+    <string name="_7_days">7 days</string>
+    <string name="_30_days">30 days</string>
+    <string name="this_week">This week</string>
+    <string name="this_month">This month</string>
+    <string name="average_day">Average/day</string>
+    <string name="chart">Chart</string>
+    <string name="recent_access">Recent access</string>
+    <string name="successful">Successful</string>
+    <string name="go_to_statistics">Go to statistics</string>
+    <string name="register">Create new account</string>
+    <string name="welcome_back">Welcome back!</string>
+    <string name="login_to_continue">Login to continue</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="fullname">Fullname</string>
+    <string name="fill_in_all_fields_to_register">Fill in all fields to register</string>
+    <string name="create_account_for_manager">Create new account for manager</string>
+    <string name="phone_number">Phone number</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="i_agree_to_the_terms_of_use_and_privacy_policy">I agree to the Terms of Use and Privacy Policy</string>
+    <string name="have_an_account">Have an account?</string>
+    <string name="all">All</string>
+    <string name="search_user">Search user</string>
+    <string name="fingerprint">Fingerprint</string>
+    <string name="face">Face</string>
+    <string name="don_t_have_any_user">Don\'t have any user</string>
+    <string name="manage_users">Manage users</string>
+    <string name="update_later">Update later</string>
+    <string name="update_now">Update now</string>
+    <string name="firmware_update">Firmware update</string>
+    <string name="device_information">Device information</string>
+    <string name="device_smart_key_authenx">Device: Smart key AuthenX</string>
+    <string name="new_available_version">New available version</string>
+    <string name="log_out">Logout</string>
+    
+    <!-- User Management -->
+    <string name="user_management">User Management</string>
+    <string name="manage_user_managers">Manage User Managers</string>
+    <string name="add_manager">Add Manager</string>
+    <string name="add_user">Add User</string>
+    <string name="total_users">Total: %d users</string>
+    <string name="viewing_managers">Viewing user_managers only (Admin view)</string>
+    <string name="viewing_users">Viewing regular users only (Manager view)</string>
+    <string name="no_users_found">No users found</string>
+    
+    <!-- Create User -->
+    <string name="create_new_user">Create New User</string>
+    <string name="create_user_description">Create a new user to register fingerprint or RFID card</string>
+    <string name="full_name">Full Name</string>
+    <string name="phone">Phone</string>
+    <string name="create_user">Create User</string>
+    <string name="note_user_no_login">💡 Note: This user will not be able to login to the app.\nOnly used to register fingerprint/RFID for unlocking.</string>
+    <string name="name_required">Name is required</string>
+    <string name="phone_required">Phone is required</string>
+    <string name="invalid_phone">Invalid phone number</string>
+    <string name="create_user_success">User %s created successfully!</string>
+    
+    <!-- Enroll Biometric -->
+    <string name="enroll_fingerprint">Enroll Fingerprint</string>
+    <string name="user_label">User: %s</string>
+    <string name="fingerprint_id_label">Fingerprint ID: %d</string>
+    <string name="card_uid_label">Card UID: %s</string>
+    <string name="start_enrollment">Start Enrollment</string>
+    <string name="done">Done</string>
+    <string name="sending_command">Sending enrollment command to device...</string>
+    <string name="place_finger_on_sensor">Please place finger on sensor</string>
+    <string name="enrollment_instruction">📱 Place finger on sensor 3 times\n🔄 Wait for ESP32 to process and save data\n✅ System will automatically complete</string>
+    <string name="enrollment_success">Fingerprint enrolled successfully! ✅</string>
+    <string name="user_id_not_found">User ID not found</string>
+    <string name="enrollment_failed">Enrollment failed</string>
+    
+    <!-- Organization Management -->
+    <string name="create_organization">Create Organization</string>
+    <string name="create_organization_description">Create a new organization to manage devices and users</string>
+    <string name="organization">Organization</string>
+    <string name="organization_name">Organization Name</string>
+    <string name="address">Address (Optional)</string>
+    <string name="create_organization_success">Organization %s created successfully!</string>
+    <string name="manage_organizations">Manage Organizations</string>
+    <string name="place_fingerprint_on_the_sensor">Place fingerprint on the sensor</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+
+    <!-- Device Management -->
+    <string name="device_management">Device Management</string>
+    <string name="my_devices">My Devices</string>
+    <string name="register_device">Register Device</string>
+    <string name="device_list">Device List</string>
+    <string name="device_detail">Device Detail</string>
+    <string name="device_id">Device ID</string>
+    <string name="device_type">Device Type</string>
+    <string name="device_model">Device Model</string>
+    <string name="organization_id">Organization ID</string>
+    <string name="status">Status</string>
+    <string name="created_at">Created At</string>
+    <string name="last_active">Last Active</string>
+    <string name="no_devices_found">No devices found</string>
+    <string name="actions">Actions</string>
+    <string name="enroll_rfid">Enroll RFID</string>
+    <string name="view_logs">View Logs</string>
+    <string name="loading_devices">Loading devices...</string>
+    <string name="refresh_devices">Refresh devices</string>
+    <string name="manage_devices">Manage Devices</string>
+    <string name="register_new_device">Register New Device</string>
+    <string name="device_will_be_registered_as_smart_lock_esp32_v1_to_your_organization_automatically">Device will be registered as Smart Lock (ESP32_v1) to your organization automatically.</string>
+    <string name="try_adjusting_your_search">Try adjusting your search</string>
+    <string name="user_example_com">user@example.com</string>
+    <string name="user">User</string>
+    <string name="user_name">User name</string>
+    <string name="please_scan_your_rfid_card_on_the_reader">Please scan your RFID card on the reader</string>
+    <string name="system_overview">System Overview</string>
+    <string name="total_organizations">Total Organizations</string>
+    <string name="organizations">Organizations</string>
+    <string name="security_alerts">Security Alerts</string>
+    <string name="total_children">Total Children</string>
+    <string name="total_devices">Total Devices</string>
+    <string name="overview">Overview</string>
+    <string name="statistics">Statistics</string>
+    <string name="total_access">Total Access</string>
+    <string name="alerts">Alerts</string>
+    <string name="delete_face">Delete face</string>
+    
+    <!-- Face Registration -->
+    <string name="only_user_manager_can_register_face">Only user_manager can register face</string>
+    <string name="user_info_not_found">User information not found. Please login again.</string>
+    <string name="register_face_for">Register face for: %s</string>
+    <string name="place_face_instruction">Place your face in the center of the frame and tap capture</string>
+    <string name="capture_photo">Capture Photo</string>
+    <string name="capturing_photo">Capturing photo...</string>
+    <string name="confirm_delete">Confirm Delete</string>
+    <string name="confirm_delete_face_message">Are you sure you want to delete your registered face?</string>
+    <string name="face_deleted_successfully">Face deleted successfully</string>
+    <string name="face_registered_successfully">Face registered successfully!</string>
+    <string name="try_again">Try Again</string>
+    <string name="camera_permission_required">Camera permission is required</string>
+    <string name="register_face_title">Register Face</string>
+    <string name="unlock_by_face">Unlock by Face</string>
+    
+    <!-- Edit Profile -->
+    <string name="edit_profile">Edit Profile</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="change_password_optional">Change Password (Optional)</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="profile_updated_successfully">Profile updated successfully</string>
+    <string name="profile">Profile</string>
+</resources>

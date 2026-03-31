@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:strokeColor="@color/transparent_overlay"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Device Icon -->
+        <ImageView
+            android:id="@+id/ivDeviceIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_device"
+            app:tint="@color/secondary_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Device ID -->
+        <TextView
+            android:id="@+id/tvDeviceId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="ESP32_001"
+            android:textSize="16sp"
+            android:textColor="@color/primary_color"
+            android:fontFamily="@font/montserrat_semibold"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@id/ivDeviceIcon"
+            app:layout_constraintEnd_toStartOf="@id/btnDeviceMenu"
+            app:layout_constraintTop_toTopOf="@id/ivDeviceIcon" />
+
+        <!-- Menu Button -->
+        <ImageButton
+            android:id="@+id/btnDeviceMenu"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_more_vert"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Device menu"
+            app:tint="@color/secondary_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Device Model -->
+        <TextView
+            android:id="@+id/tvDeviceModel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="ESP32-WROOM-32"
+            android:textSize="14sp"
+            android:textColor="@color/primary_color"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@id/tvDeviceId"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDeviceId" />
+
+        <!-- Device Type and Status Row -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/tvDeviceId"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDeviceModel">
+
+            <TextView
+                android:id="@+id/tvDeviceType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="smart_lock"
+                android:textSize="12sp"
+                android:textColor="@color/secondary_color"
+                android:fontFamily="@font/montserrat"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:background="@drawable/bg_rounded_tag"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvDeviceStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Online"
+                android:textSize="12sp"
+                android:textColor="@color/green_status"
+                android:fontFamily="@font/montserrat_semibold"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
