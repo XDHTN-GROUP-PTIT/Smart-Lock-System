@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.ui.mainapp.face_registration.FaceRegistrationFragment">
+
+    <!-- Header with user info -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Đăng ký khuôn mặt"
+        android:textColor="@color/primary_color"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvUserInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Đăng ký cho: User Name"
+        android:textColor="@color/secondary_color"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:paddingBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Camera Preview with Guide Box -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/guideBox"
+        android:layout_width="280dp"
+        android:layout_height="360dp"
+        app:cardCornerRadius="16dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/secondary_color"
+        app:cardElevation="4dp"
+        app:layout_constraintVertical_bias="0.35"
+        app:layout_constraintTop_toBottomOf="@id/tvUserInfo"
+        app:layout_constraintBottom_toTopOf="@id/tvInstruction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Preview of captured image -->
+    <ImageView
+        android:id="@+id/ivPreview"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:background="@color/light_gray"
+        app:layout_constraintTop_toTopOf="@id/guideBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@id/guideBox"
+        tools:visibility="visible" />
+
+    <!-- Instruction Text -->
+    <TextView
+        android:id="@+id/tvInstruction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Đặt khuôn mặt vào giữa khung hình và nhấn chụp"
+        android:textColor="@color/primary_color"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/guideBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Buttons Container -->
+    <LinearLayout
+        android:id="@+id/buttonsContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/tvInstruction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3">
+
+        <!-- Delete Face Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDeleteFace"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:text="@string/delete_face"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/error"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textSize="14sp"
+            app:cornerRadius="12dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Capture Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCapture"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:text="Chụp ảnh"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/secondary_color"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textSize="16sp"
+            app:cornerRadius="12dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Cancel Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:text="Hủy"
+            android:textColor="@color/primary_color"
+            android:backgroundTint="@color/light_gray"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textSize="16sp"
+            app:cornerRadius="12dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp" />
+
+    </LinearLayout>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressProcessing"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

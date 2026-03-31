@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <!-- Auth Fragments -->
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.authenx.presentation.ui.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.authenx.presentation.ui.auth.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Main App Fragments -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.authenx.presentation.ui.mainapp.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_faceAuthenFragment"
+            app:destination="@id/faceAuthenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_statisticFragment"
+            app:destination="@id/statisticFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_userManagementFragment"
+            app:destination="@id/userManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_firmwareUpdateFragment"
+            app:destination="@id/firmwareUpdateFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_createOrganizationFragment"
+            app:destination="@id/createOrganizationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_deviceListFragment"
+            app:destination="@id/deviceListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_faceRegistrationFragment"
+            app:destination="@id/faceRegistrationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/faceAuthenFragment"
+        android:name="com.example.authenx.presentation.ui.mainapp.face_authen.FaceAuthenFragment"
+        android:label="fragment_face_authen"
+        tools:layout="@layout/fragment_face_authen" >
+        <argument
+            android:name="deviceId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/statisticFragment"
+        android:name="com.example.authenx.presentation.ui.mainapp.statistic.StatisticFragment"
+        android:label="StatisticFragment"
+        tools:layout="@layout/fragment_statistic" />
+    <fragment
+        android:id="@+id/userManagementFragment"
+        android:name="com.example.authenx.presentation.ui.mainapp.user_management.UserManagementFragment"
+        android:label="UserManagementFragment" >
+        <action
+            android:id="@+id/action_userManagementFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_userManagementFragment_to_createUserFragment"
+            app:destination="@id/createUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_userManagementFragment_to_enrollBiometricFragment"
+            app:destination="@id/enrollBiometricFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_userManagementFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/deviceListFragment"
+        android:name="com.example.authenx.presentation.ui.mainapp.device_list.DeviceListFragment"
+        android:label="DeviceListFragment"
+        tools:layout="@layout/fragment_device_list" >
+        <action
+            android:id="@+id/action_deviceListFragment_to_deviceDetailFragment"
+            app:destination="@id/deviceDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_deviceListFragment_to_registerDeviceFragment"
+            app:destination="@id/registerDeviceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_deviceListFragment_to_faceAuthenFragment"
+            app:destination="@id/faceAuthenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerDeviceFragment"
+        android:name="com.example.authenx.presentation.ui.mainapp.device.RegisterDeviceFragment"
+        android:label="RegisterDeviceFragment"
+        tools:layout="@layout/fragment_register_device" />
+
+    <fragment
+        android:id="@+id/deviceDetailFragment"
+        android:name="com.example.authenx.presentation.ui.mainapp.device.DeviceDetailFragment"
+        android:label="DeviceDetailFragment"
+        tools:layout="@layout/fragment_device_detail" >
+        <action
+            android:id="@+id/action_deviceDetailFragment_to_selectUserFragment"
+            app:destination="@id/selectUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_deviceDetailFragment_to_selectUserForRfidFragment"
+            app:destination="@id/selectUserForRfidFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_deviceDetailFragment_to_faceAuthenFragment"
+            app:destination="@id/faceAuthenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectUserFragment"
+        android:name="com.example.authenx.presentation.ui.mainapp.select_user.SelectUserFragment"
+        android:label="SelectUserFragment"
+        tools:layout="@layout/fragment_select_user" >
+        <argument
+            android:name="deviceId"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_selectUserFragment_to_enrollBiometricFragment"
+            app:destination="@id/enrollBiometricFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectUserForRfidFragment"
+        android:name="com.example.authenx.presentation.ui.mainapp.select_user.SelectUserFragment"
+        android:label="SelectUserFragment"
+        tools:layout="@layout/fragment_select_user" >
+        <argument
+            android:name="deviceId"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_selectUserForRfidFragment_to_enrollRfidFragment"
+            app:destination="@id/enrollRfidFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/enrollRfidFragment"
+        android:name="com.example.authenx.presentation.ui.mainapp.enroll_rfid.EnrollRfidFragment"
+        android:label="EnrollRfidFragment"
+        tools:layout="@layout/fragment_enroll_rfid" />
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.authenx.presentation.ui.auth.register.RegisterFragment"
+        android:label="RegisterFragment" />
+        
+    <fragment
+        android:id="@+id/createUserFragment"
+        android:name="com.example.authenx.presentation.ui.mainapp.create_user.CreateUserFragment"
+        android:label="CreateUserFragment" >
+        <action
+            android:id="@+id/action_createUserFragment_to_enrollBiometricFragment"
+            app:destination="@id/enrollBiometricFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/enrollBiometricFragment"
+        android:name="com.example.authenx.presentation.ui.mainapp.enroll_biometric.EnrollBiometricFragment"
+        android:label="EnrollBiometricFragment" />
+        
+    <fragment
+        android:id="@+id/createOrganizationFragment"
+        android:name="com.example.authenx.presentation.ui.mainapp.create_organization.CreateOrganizationFragment"
+        android:label="CreateOrganizationFragment" />
+        
+    <fragment
+        android:id="@+id/firmwareUpdateFragment"
+        android:name="com.example.authenx.presentation.ui.mainapp.firmware_update.FirmwareUpdateFragment"
+        android:label="FirmwareUpdateFragment" />
+    
+    <fragment
+        android:id="@+id/faceRegistrationFragment"
+        android:name="com.example.authenx.presentation.ui.mainapp.face_registration.FaceRegistrationFragment"
+        android:label="FaceRegistrationFragment"
+        tools:layout="@layout/fragment_face_registration" />
+    
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.authenx.presentation.ui.mainapp.edit_profile.EditProfileFragment"
+        android:label="@string/edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <argument
+            android:name="userId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>
