@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".presentation.ui.mainapp.home.HomeFragment">
+
+        <ImageView
+            android:id="@+id/btnUpdate"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/download"
+            app:tint="@color/secondary_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/authenx"
+            android:textSize="48sp"
+            android:textColor="@color/primary_color"
+            android:fontFamily="@font/montserrat_semibold"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@+id/btnRegisterFace"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@id/tvAppName"
+            android:text="@string/register_face"
+            android:backgroundTint="@color/secondary_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/btnStatistic"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/btnRegisterFace"
+            android:text="@string/go_to_statistics"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/secondary_color"
+            app:layout_constraintStart_toStartOf="@id/btnRegisterFace"
+            app:layout_constraintEnd_toEndOf="@id/btnRegisterFace"/>
+
+        <Button
+            android:id="@+id/btnManageUsers"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/btnStatistic"
+            android:text="@string/manage_users"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/secondary_color"
+            app:layout_constraintStart_toStartOf="@id/btnRegisterFace"
+            app:layout_constraintEnd_toEndOf="@id/btnRegisterFace"/>
+            
+        <Button
+            android:id="@+id/btnCreateOrganization"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/btnManageUsers"
+            android:text="@string/create_organization"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/secondary_color"
+            app:layout_constraintStart_toStartOf="@id/btnRegisterFace"
+            app:layout_constraintEnd_toEndOf="@id/btnRegisterFace"
+            android:visibility="gone"/>
+            
+        <Button
+            android:id="@+id/btnManageDevices"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/btnCreateOrganization"
+            android:text="@string/manage_devices"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/secondary_color"
+            app:layout_constraintStart_toStartOf="@id/btnRegisterFace"
+            app:layout_constraintEnd_toEndOf="@id/btnRegisterFace"
+            android:visibility="gone"/>
+            
+        <Button
+            android:id="@+id/btnProfile"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/btnManageDevices"
+            android:text="@string/profile"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/secondary_color"
+            app:layout_constraintStart_toStartOf="@id/btnRegisterFace"
+            app:layout_constraintEnd_toEndOf="@id/btnRegisterFace"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:text="@string/log_out"
+            android:padding="16sp"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:backgroundTint="@color/secondary_color"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintTop_toBottomOf="@id/btnProfile"
+            app:layout_constraintStart_toStartOf="@id/btnRegisterFace"
+            app:layout_constraintEnd_toEndOf="@id/btnRegisterFace"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
